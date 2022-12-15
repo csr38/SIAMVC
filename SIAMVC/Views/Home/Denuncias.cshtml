@@ -1,0 +1,124 @@
+﻿@model Reporte
+@{
+}
+
+
+
+<div class="p-5 mb-4 bg-light rounded-3">
+
+        <h2 class="fw-bold">Hacer reporte</h2>
+
+        <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Datos</h4>
+            <form asp-action="Denuncias" method="post"  class="needs-validation" novalidate>
+            <div asp-validation-summary ="All"></div>
+                <div class="row g-3">
+                    
+                    <div class="col-sm-6">
+                      <label for="firstName" class="form-label">Nombre</label>
+                      <input asp-for="Nombre" type="text" class="form-control" id="nombre" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Se requiere un nombre valido.
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="lastName" class="form-label">Apellido</label>
+                      <input asp-for="Apellido" type="text" class="form-control" id="apellido" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Se requiere un apellido valido.
+                      </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
+                        <input asp-for="Email" type="email" class="form-control" id="email" placeholder="tu@ejemplo.com">
+                        <div class="invalid-feedback">
+                            Por favor ingrese un email valido.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="country" class="form-label">Fauna</label>
+                      <select asp-for="Fauna" class="form-select" id="opcion" required>
+                        <option value="">Escoger....</option>
+                        <option value="1">Muy Alto</option>
+                        <option value="2">Alto</option>
+                        <option value="3">Normal</option>
+                        <option value="4">Bajo</option>
+                        <option value="5">Critico Bajo</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor ingrese una opcion valida
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="state" class="form-label">Flora</label>
+                      <select asp-for="Flora" class="form-select" id="state" required>
+                        <option value="">Escoger...</option>
+                        <option value="1">Muy Prominente</option>
+                        <option value="2">Prominente</option>
+                        <option value="3">Equilibrada</option>
+                        <option value="4">Escaso</option>
+                        <option value="5">Muy Escaso</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor ingrese una opcion valida
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                          <label for="state" class="form-label">Suelo</label>
+                         <select asp-for="Suelo" class="form-select" id="state" required>
+                            <option value="">Escoger...</option>
+                            <option value="1">Alto</option>
+                            <option value="2">Medio Alto</option>
+                            <option value="3">Medio</option>
+                            <option value="4">Medio Bajo</option>
+                            <option value="5">Bajo</option>
+                          </select>
+                        <div class="invalid-feedback">
+                                Por favor ingrese una opcion valida
+                          </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="state" class="form-label">Estaciones</label>
+                        <select asp-for="Estaciones" class="form-select" id="state" required>
+                            <option value="">Escoger...</option>
+                            <option value="1">Verano</option>
+                            <option value="2">Otoño</option>
+                            <option value="3">Invierno</option>
+                            <option value="4">Primavera</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor ingrese una opcion valida
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="state" class="form-label">Agua</label>
+                        <select asp-for="Agua" class="form-select" id="state" required>
+                            <option value="">Escoger...</option>
+                            <option value="1">Rapido(mas de 60km/h)</option>
+                            <option value="2">Moderado</option>
+                            <option value="3">Lento</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor ingrese una opcion valida
+                        </div>
+                    </div>
+
+
+                </div>
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar Datos</button>
+            </form>
+
+        </div>
+
+</div>
+

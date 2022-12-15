@@ -1,0 +1,38 @@
+﻿@model List<Reporte>
+@{
+}
+<div class="p-5 mb-4 bg-light rounded-3">
+    <h1>Reportes</h1>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Fauna</th>
+                <th>Flora</th>
+                <th>Suelo</th>
+                <th>Estacion</th>
+                <th>Agua</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+              <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.Nombre</td>
+                    <td>@item.Apellido</td>
+                    <td>@item.Email</td>
+                    <td>@item.Fauna</td>
+                    <td>@item.Flora</td>
+                    <td>@item.Suelo</td>
+                    <td>@item.Estaciones</td>
+                    <td>@item.Agua</td>
+                </tr>  
+        }
+        </tbody>
+    </table>
+</div>
