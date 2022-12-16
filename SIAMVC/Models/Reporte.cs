@@ -17,6 +17,8 @@ namespace SIAMVC.Models
         public string? Estaciones { get; set; }
         public string? Agua { get; set; }
 
+        public string? Comentario { get; set; }
+
 
     }
 }

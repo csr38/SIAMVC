@@ -4,35 +4,29 @@
 <div class="p-5 mb-4 bg-light rounded-3">
     <h1>Reportes</h1>
 
-    <table class="table table-dark table-striped">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-                <th>Fauna</th>
-                <th>Flora</th>
-                <th>Suelo</th>
-                <th>Estacion</th>
-                <th>Agua</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach (var item in Model)
         {
-              <tr>
-                    <th scope="row">@item.Id</th>
-                    <td>@item.Nombre</td>
-                    <td>@item.Apellido</td>
-                    <td>@item.Email</td>
-                    <td>@item.Fauna</td>
-                    <td>@item.Flora</td>
-                    <td>@item.Suelo</td>
-                    <td>@item.Estaciones</td>
-                    <td>@item.Agua</td>
-                </tr>  
+
+                <div class="col">
+                <div class="card border-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-success">@item.Nombre @item.Apellido</div>
+                    <div class="card-body text-success">
+                        <h5 class="card-title">Comentario</h5>
+                        <p class="card-text">@item.Comentario</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-success">
+                        Email: @item.Email<br/>
+                        Fauna: @item.Fauna<br />
+                        Flora: @item.Flora <br/>
+                        Suelo: @item.Suelo<br />
+                        Estaciones: @item.Estaciones <br/>
+                        Agua: @item.Agua
+                    </div>
+                </div>
+                </div>
+              
         }
-        </tbody>
-    </table>
+    </div>
+ 
 </div>

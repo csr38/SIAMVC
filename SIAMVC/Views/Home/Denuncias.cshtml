@@ -10,34 +10,37 @@
             <form asp-action="Denuncias" method="post"  class="needs-validation" novalidate>
             <div asp-validation-summary ="All"></div>
                 <div class="row g-3">
-                    
-                    <div class="col-sm-6">
-                      <label for="firstName" class="form-label">Nombre</label>
-                      <input asp-for="Nombre" type="text" class="form-control" id="nombre" placeholder="" value="" required>
+
+                      <div class="form-floating col-sm-6">
+
+                    <input asp-for="Nombre" maxlength="40" type="text" class="form-control" id="nombre" placeholder="Nombre" value="" required>
+                       <label for="floatingInput">Nombre</label>
                       <div class="invalid-feedback">
                         Se requiere un nombre valido.
                       </div>
                     </div>
 
-                    <div class="col-sm-6">
-                      <label for="lastName" class="form-label">Apellido</label>
-                      <input asp-for="Apellido" type="text" class="form-control" id="apellido" placeholder="" value="" required>
+                    <div class="form-floating col-sm-6">
+
+                    <input asp-for="Apellido" maxlength="40" type="text" class="form-control" id="apellido" placeholder="Apellido" value="" required>
+                      <label for="floatingInput">Apellido</label>
                       <div class="invalid-feedback">
                         Se requiere un apellido valido.
                       </div>
                     </div>
 
 
-                    <div class="col-12">
-                        <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
-                        <input asp-for="Email" type="email" class="form-control" id="email" placeholder="tu@ejemplo.com">
+                    <div class="form-floating  col-12">
+
+                    <input asp-for="Email" maxlength="40" type="email" class="form-control" id="email" placeholder="tu@ejemplo.com">
+                        <label for="floatingInput">Email</label>
                         <div class="invalid-feedback">
                             Por favor ingrese un email valido.
                         </div>
                     </div>
 
-                    <div class="col-md-6">
-                      <label for="country" class="form-label">Fauna</label>
+                    <div class="form-floating col-md-6">
+
                       <select asp-for="Fauna" class="form-select" id="opcion" required>
                         <option value="">Escoger....</option>
                         <option value="1">Muy Alto</option>
@@ -46,13 +49,14 @@
                         <option value="4">Bajo</option>
                         <option value="5">Critico Bajo</option>
                       </select>
+                    <label for="floatingSelect">Fauna</label>
                       <div class="invalid-feedback">
                         Por favor ingrese una opcion valida
                       </div>
                     </div>
 
-                    <div class="col-md-6">
-                      <label for="state" class="form-label">Flora</label>
+                    <div class="form-floating col-md-6">
+                     
                       <select asp-for="Flora" class="form-select" id="state" required>
                         <option value="">Escoger...</option>
                         <option value="1">Muy Prominente</option>
@@ -61,13 +65,14 @@
                         <option value="4">Escaso</option>
                         <option value="5">Muy Escaso</option>
                       </select>
+                    <label for="floatingSelect">Flora</label>
                       <div class="invalid-feedback">
                         Por favor ingrese una opcion valida
                       </div>
                     </div>
 
-                    <div class="col-md-4">
-                          <label for="state" class="form-label">Suelo</label>
+                    <div class="form-floating col-md-4">
+                          
                          <select asp-for="Suelo" class="form-select" id="state" required>
                             <option value="">Escoger...</option>
                             <option value="1">Alto</option>
@@ -76,13 +81,14 @@
                             <option value="4">Medio Bajo</option>
                             <option value="5">Bajo</option>
                           </select>
+                    <label for="floatingSelect">Suelo</label>
                         <div class="invalid-feedback">
                                 Por favor ingrese una opcion valida
                           </div>
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="state" class="form-label">Estaciones</label>
+                    <div class="form-floating col-md-4">
+                        
                         <select asp-for="Estaciones" class="form-select" id="state" required>
                             <option value="">Escoger...</option>
                             <option value="1">Verano</option>
@@ -90,22 +96,29 @@
                             <option value="3">Invierno</option>
                             <option value="4">Primavera</option>
                         </select>
+                    <label for="floatingSelect">Estaciones</label>
                         <div class="invalid-feedback">
                             Por favor ingrese una opcion valida
                         </div>
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="state" class="form-label">Agua</label>
+                    <div class="form-floating col-md-4">
+                       
                         <select asp-for="Agua" class="form-select" id="state" required>
                             <option value="">Escoger...</option>
                             <option value="1">Rapido(mas de 60km/h)</option>
                             <option value="2">Moderado</option>
                             <option value="3">Lento</option>
                         </select>
+                    <label for="floatingSelect">Agua</label>
                         <div class="invalid-feedback">
                             Por favor ingrese una opcion valida
                         </div>
+                    </div>
+
+                    <div class="form-floating">
+                    <textarea asp-for="Comentario" maxlength="40"  class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                      <label for="floatingTextarea2">Comentario</label>
                     </div>
 
 

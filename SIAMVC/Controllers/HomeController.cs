@@ -50,7 +50,7 @@ namespace SIAMVC.Controllers
                 _context.Add(n);
                 _context.SaveChanges();
 
-                return RedirectToAction("index");
+                return RedirectToAction("VerDenuncias");
             }
             else
             {
