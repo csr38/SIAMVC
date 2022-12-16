@@ -15,7 +15,9 @@ namespace SIAMVC.Controllers
 
         public IActionResult Index()
         {
+
             return View();
+
         }
 
         public IActionResult HumedalElqui()
@@ -68,5 +70,8 @@ namespace SIAMVC.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+     
     }
 }
