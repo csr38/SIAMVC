@@ -18,13 +18,25 @@ namespace SIAMVC.Controllers
             return View();
         }
 
+        public IActionResult HumedalElqui()
+        {
+
+            return View();
+        }
+
+        public IActionResult HumedalElCulebron()
+        {
+
+            return View();
+        }
+
         public IActionResult VerDenuncias()
         {
             var datos = _context.Datos.ToList();
             return View(datos);
         }
 
- 
+
         public IActionResult Denuncias()
         {
             return View();
